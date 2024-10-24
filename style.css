@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* height: 500vh; */
+  margin: 0px;
+  font-family: 'segoe ui';
+  background-color: black;
+  /* background-image: url('bg.jpg'); */
+  background-size: cover;
+  background-position: center;
+}
+
+.nav {
+  height: 53px;
+  width: 100%;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  right: 0rem;
+  position: sticky;
+  top: 0px;
+}
+
+.nav .nav-header .nav-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  position: relative;
+  top: 10px;
+  color: black;
+  padding: 0 5rem;
+  cursor: pointer;
+  transform: scale(1.2);
+  /* margin: 10px; */
+}
+
+.nav .nav-btn {
+  display: none;
+}
+
+.nav>.nav-links {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+  justify-items: center;
+  position: relative;
+  top: 8px;
+  right: 3.5rem;
+}
+
+.nav .nav-links a {
+  display: inline-block;
+  padding: 0 1.5rem;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav .nav-links a:hover {
+  color: orange;
+}
+
+.nav #nav-check {
+  display: none;
+}
+.set{
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width:600px) {
+  .nav>.nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .nav>.nav-btn>label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    /* padding: 13px; */
+  }
+
+  .nav>.nav-btn>label:hover,
+  .nav #nav-check:checked~.nav-btn>label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .nav>.nav-btn label span {
+    display: block;
+
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+    position: relative;
+    top: 0.9rem;
+    left: 0.72rem;
+    cursor: pointer;
+  }
+
+  .nav .nav-links {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    border-radius: 12px;
+    background-color: rgb(16, 14, 14);
+    height: 15vh;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    transition: scale 0.2 ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  .nav .nav-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 15px;
+    position: relative;
+    top: 15px;
+    padding: 1rem;
+    font-weight: bold;
+
+  }
+
+  .nav>#nav-check:not(:checked)~.nav-links {
+    height: 0px;
+  }
+
+  .nav>#nav-check:checked~.nav-links {
+    height: 240px;
+    overflow-y: auto;
+  }
+}
+
+/* css for main page */
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 95vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.intro h1 {
+  font-family: sans-serif;
+  font-size: 60px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+}
+
+.intro p {
+  font-size: 20px;
+  color: #d1d1d1;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.intro button {
+  background-color: #5edaf0;
+  color: #000;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 21px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+}
+
+.btn:hover {
+  color: red;
+}
+@media (max-width:600px){
+ .intro{
+  height: 80vh;
+ }
+}
+
+/* about us form */
+
+.new {
+  height: 60vh;
+  background-color: #eee;
+  background-image: url('https://www.allianceforrias.com/sites/default/files/2017-03/background-image-about-us.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.new h1{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: solid 2px red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 15px;
+  transition: scale 0.2 ease;
+}
+ .top {
+  background-color: #5edaf0;
+  color: #000;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 18px;
+  font-size: 18px;
+  /* font-weight: ; */
+  /* fo */
+  cursor: pointer;
+  /* display: flex;
+  align-items: flex-start;
+  justify-content: flex-end; */
+  position: relative;
+  top: 48vh;
+  left: 85%;
+ 
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+}
+.about ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px;
+  /* margin: 0 auto; */
+  list-style: none;
+}
+.about ul li{
+  /* margin: 50px auto; */
+  margin: 30px;
+}
+.about ul li img{
+  /* display: none; */
+  /* background-size: auto; */
+  /* background-position-x: center; */
+  background-size: cover;
+  background-position: center;
+}
+/* .d1,.d2{
+  display:flex;
+  fl
+} */
+@media (min-width:600px)and(max-width:768px){
+    .new{
+      height: 210vh;
+    }
+  .top{
+      position: relative;
+      left: 78%;
+    }
+    .about ul{
+      display: flex;
+      flex-direction: column;
+  
+    }
+    .d1 .d2{
+      display: flex;
+      flex-direction: row;
+    }
+    .d3.d4{
+     display: flex;
+     flex-direction: row;
+    }
+    .about ul{
+        padding: 10px;
+    }
+
+}
+@media (max-width: 2000px){
+  .new{
+    height: 90vh
+  }
+  .new {
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+  }
+}
+
+@media (max-width: 600px) {
+  .new{
+    height: 190vh;
+  }
+  .new .set{
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
+    
+  }
+  .top{
+    position: relative;
+    left:52%;
+  }
+
+  .footer{
+    height: 13vh;
+  }
+
+
+  
+}
+.div1 .div2{
+  display: none;
+}
+
+
+/* footer html cvodde */
+.footer {
+  height: 13vh;
+  background-color: rgb(127, 156, 158);
+  width: 100%;
+  background-image: url('https://www.acterys.com/wp-content/uploads/2018/04/footer-background@2x.jpg');
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.footer .sites {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  position: relative;
+  top: 3px;
+}
+
+.footer .sites a {
+  margin: 20px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 10px;
+}
+
+.info a {
+  margin: 0 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  color: #000;
+}
+
+.info a:hover {
+  color: white;
+}
+.h1{
+  color: rgb(12, 10, 7);
+  font-weight: bold;
+  font-size: 22px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 20px;
+}
+
+
+
+
+
+/* cover both footer and main page of website */
+
+.bg {
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
